@@ -1,7 +1,7 @@
 @spec = Gem::Specification.new do |s|
   s.name = "hexoid"
   s.rubyforge_project = 'hexoid'
-  s.version = "0.9.0"
+  s.version = "0.2.0"
   s.summary = "Hexoid: Encode your object IDs like Ruby does."
   s.description = s.summary
   s.author = "Delano Mandelbaum"
@@ -19,8 +19,9 @@
   CHANGES.txt
   LICENSE.txt
   README.rdoc
-  lib/hexoid.rb
+  Rakefile
   hexoid.gemspec
+  lib/hexoid.rb
   )
 
   
