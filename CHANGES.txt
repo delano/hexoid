@@ -1,0 +1,6 @@
+HEXOID, CHANGES
+
+
+#### 0.2.0 (2009-09-??) ###############################
+
+* Initial public release
