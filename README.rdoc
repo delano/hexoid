@@ -1,30 +1,30 @@
 = Hexoid v0.2
 
-<b>Encode your object ids like Ruby does</b>
+<b>Generate Ruby style object ids</b>
 
-The default <tt>to_s</tt> method for Ruby objects includes the object id encoded as a hexadecimal: <tt>#&lt;Object:0x000001009e60f8&gt;</tt>. When you add a <tt>to_s</tt> method to your own objects, you lose that hexadecimal value. Hexoid gives it back.
-
-== Features
-
-* Encodes integers in the style of Ruby's hexadecimal object ids
+The default <tt>to_s</tt> method for Ruby objects includes the object id encoded as a hexadecimal: <tt>#<Object:0x000001009e60f8></tt>. When you add a <tt>to_s</tt> method to your own objects, you lose that hexadecimal value. Hexoid gives it back.
 
 == Usage
 
     require 'hexoid'
 
-    obj = Object.new
+    class A
+      def to_s
+        "<A:%s>" % self.hexoid
+      end
+    end
     
-    puts obj              # => #<Object:0x000001009e60f8>
-    puts obj.hexoid       # => 0x000001009e60f8
+    obj = A.new
+    puts obj            # => "<A:0x10103a380>"
+    puts obj.hexoid     # => "0x10103a380"
     
-
 == Installation
 
 Get it in one of the following ways:
 
-     $ gem install hexoid
-     $ git clone git://github.com/delano/hexoid.git
-     $ gem install delano-hexoid --source http://gems.github.com
+* <tt>gem install hexoid</tt>
+* <tt>git clone git://github.com/delano/hexoid.git</tt>
+* <tt>gem install delano-hexoid --source http://gems.github.com</tt>
 
 
 == Known Issues
