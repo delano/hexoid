@@ -10,7 +10,7 @@ The default <tt>to_s</tt> method for Ruby objects includes the object id encoded
 
     class A
       def to_s
-        "<A:%s>" % self.hexoid
+        "<%s:%s>" % [self.class.name, hexoid]
       end
     end
     
