@@ -31,7 +31,7 @@
         </div>
         <div class='last-update'>
           Last Update:
-          <span class='datetime'>2009-09-21 19:48:05 -0400</span>
+          <span class='datetime'>2010-02-15 15:38:36 -0500</span>
         </div>
       </div>
       <div id='content'>
@@ -48,7 +48,7 @@
             hexadecimal value. Hexoid gives it back.
             </p>
             <h2>Usage</h2>
-            <pre>require 'hexoid'&#x000A;&#x000A;class A&#x000A;  def to_s&#x000A;    &quot;&lt;A:%s&gt;&quot; % self.hexoid&#x000A;  end&#x000A;end&#x000A;&#x000A;obj = A.new&#x000A;puts obj            # =&gt; &quot;&lt;A:0x10103a380&gt;&quot;&#x000A;puts obj.hexoid     # =&gt; &quot;0x10103a380&quot;</pre>
+            <pre>require 'hexoid'&#x000A;&#x000A;class A&#x000A;  def to_s&#x000A;    &quot;&lt;%s:%s&gt;&quot; % [self.class.name, hexoid]&#x000A;  end&#x000A;end&#x000A;&#x000A;obj = A.new&#x000A;puts obj            # =&gt; &quot;&lt;A:0x10103a380&gt;&quot;&#x000A;puts obj.hexoid     # =&gt; &quot;0x10103a380&quot;</pre>
             <h2>Installation</h2>
             <p>
             Get it in one of the following ways:
