@@ -1,9 +1,8 @@
+require 'hexoid'
+  
+## Hexoid matches to_s
+pattern = RUBY_VERSION >= "1.9" ? "#<%s:0x00000%x>" : "#<%s:0x%x>"
+@a = Class.new
+pattern % [@a.class, @a.hexoid]
+#=> @a.to_s
 
-library :hexoid, 'lib'
-tryouts "Essentials" do
-  
-  drill "default", Thread.current do
-    "#<%s:0x%s>" % [Thread.current.class, Thread.current.object_id]
-  end
-  
-end
